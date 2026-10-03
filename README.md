@@ -2,8 +2,6 @@
 
 A custom Stream Deck action that smoothly fades a selected Meld Studio layer or group’s contents in or out. Press the same key again during a fade to reverse direction from its current opacity.
 
-The plugin identifier is **`com.fafnyir.meldfade`** and its folder is **`com.fafnyir.meldfade.sdPlugin`**. This is a new identity relative to the earlier `com.fpatten` build: after installing, add the new action to your keys and select your layers/groups again. Old key assignments and remembered group membership do not migrate automatically.
-
 ## Install and try it
 
 1. Use **Stream Deck 7.5 or later** on macOS 13+ or Windows 10+. The plugin uses Stream Deck’s included Node.js 24 runtime; you do not need to install Node, npm, or any libraries to use it.
