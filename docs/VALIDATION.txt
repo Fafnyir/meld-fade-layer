@@ -1,0 +1,42 @@
+Version 1.1.0.0: 37 tests passed; official Elgato pack succeeded with no warnings. 19 files, 88.4 kB unpacked. Global-settings restart integration test passed. Group output needs user key test.
+
+Previous release record:
+Meld Fade Layer 1.0.0.0 — validation record
+Date: 2026-09-28
+
+Automated suite: 28 passed, 0 failed
+Runtime: Node 24.19.0; also passed with Stream Deck's Node 24.13.1
+Local checks: manifest references, icon presence, all JS syntax passed
+
+Official Elgato CLI:
+  streamdeck validate com.fafnyir.meldfade.sdPlugin
+Initial validation reported one category-name warning. Category was corrected.
+
+  streamdeck pack com.fafnyir.meldfade.sdPlugin --output dist --no-file-list --no-update-check
+Final output:
+  Preparing plugin
+  Meld Fade Layer (v1.0.0.0)
+  UUID: com.fafnyir.meldfade
+  Total files: 19
+  Unpacked size: 83.7 kB
+  File name: com.fafnyir.meldfade.streamDeckPlugin
+  Successfully packaged plugin
+No errors or warnings in the final pack validation.
+
+Live read-only diagnostic:
+  Connected to Meld API 3; setProperty is available.
+  Found 6 scenes and 22 layers.
+  No layers were changed by this diagnostic.
+
+Separate live opacity capability probe:
+  Meld 0.10.6.9, hidden layer, not streaming or recording.
+  setProperty(layerId, 'opacity', 0.5) confirmed as 50% in Meld inspector.
+  setProperty(layerId, 'opacity', 1) restoration acknowledged by Meld.
+  No visibility changes were sent.
+
+Not yet executed:
+  Installation and physical key test of packaged plugin.
+  Windows installation/runtime test.
+  Visual observation of a complete animated fade on rendered output.
+
+See TESTING.md for the acceptance checklist.

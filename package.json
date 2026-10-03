@@ -1,0 +1,16 @@
+{
+  "name": "meld-fade-layer",
+  "version": "1.1.0",
+  "private": true,
+  "description": "A standalone Stream Deck action that fades Meld Studio layers.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.cjs",
+    "check": "node tools/check.cjs",
+    "diagnose": "node tools/diagnose.cjs",
+    "package": "python3 tools/package.py"
+  }
+}

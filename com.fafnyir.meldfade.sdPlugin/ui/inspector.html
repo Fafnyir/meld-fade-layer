@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fade Layer</title>
+  <link rel="stylesheet" href="inspector.css">
+</head>
+<body>
+  <header><span class="mark">◈</span><div><h1>Fade Layer</h1><p>Soft entrances. Smooth exits.</p></div></header>
+  <div id="status" role="status">Connecting to Stream Deck…</div>
+  <form id="settings">
+    <label for="sceneId">Scene</label><select id="sceneId"><option value="">Choose a scene…</option></select>
+    <label for="layerId">Layer or group</label><select id="layerId"><option value="">Choose a layer…</option></select>
+    <button type="button" id="refresh" class="secondary">Refresh layers</button>
+    <div class="pair">
+      <div><label for="fadeInMs">Fade in · ms</label><input id="fadeInMs" type="number" min="50" max="10000" step="50" value="500"></div>
+      <div><label for="fadeOutMs">Fade out · ms</label><input id="fadeOutMs" type="number" min="50" max="10000" step="50" value="500"></div>
+    </div>
+    <label for="easing">Motion</label><select id="easing"><option value="smooth">Smooth ease in / out</option><option value="linear">Linear</option></select>
+    <label for="opacity">Visible opacity · %</label><input id="opacity" type="number" min="1" max="100" step="1" value="100">
+    <p class="hint">Match this to the normal opacity in Meld. Groups fade their visible children together; the folder itself must stay visible. Press again to reverse.</p>
+    <details><summary>Connection &amp; recovery</summary>
+      <label for="url">Meld WebSocket address</label><input id="url" type="url" spellcheck="false" value="ws://127.0.0.1:13376">
+      <label for="fps">Update rate</label><select id="fps"><option value="15">15 fps · lighter load</option><option value="30" selected>30 fps · recommended</option><option value="60">60 fps · local connection</option></select>
+      <p class="hint">In Meld, enable Settings → Advanced → WebSocket Server. Use the default address when both apps run on this computer.</p>
+      <button type="button" id="restore" class="secondary" disabled>Restore layer to visible</button>
+      <p class="hint">Recovery after an interrupted fade: sets opacity to the value above and makes the chosen layer visible immediately.</p>
+    </details>
+  </form>
+  <p class="foot">Fades affect this layer’s picture. Audio is not faded. A hidden parent group can still hide the layer.</p>
+  <script src="inspector.js"></script>
+</body>
+</html>

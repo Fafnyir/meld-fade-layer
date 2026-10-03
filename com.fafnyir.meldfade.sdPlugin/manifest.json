@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "UUID": "com.fafnyir.meldfade",
+  "Name": "Meld Fade Layer",
+  "Description": "Smoothly fade a chosen Meld Studio layer in or out from a Stream Deck key.",
+  "Author": "F. Patten",
+  "Version": "1.1.0.0",
+  "SDKVersion": 2,
+  "CodePath": "src/plugin.cjs",
+  "Nodejs": {
+    "Version": "24"
+  },
+  "Software": {
+    "MinimumVersion": "7.5"
+  },
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "13"
+    },
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Icon": "images/plugin",
+  "Category": "Meld Fade Layer",
+  "CategoryIcon": "images/category",
+  "Actions": [
+    {
+      "UUID": "com.fafnyir.meldfade.toggle",
+      "Name": "Fade Layer",
+      "Tooltip": "Fade a layer in or out. Press again during a fade to reverse it.",
+      "Icon": "images/action",
+      "Controllers": [
+        "Keypad"
+      ],
+      "DisableAutomaticStates": true,
+      "SupportedInMultiActions": false,
+      "PropertyInspectorPath": "ui/inspector.html",
+      "States": [
+        {
+          "Image": "images/off",
+          "Title": "FADE",
+          "TitleAlignment": "bottom",
+          "FontSize": 11
+        },
+        {
+          "Image": "images/on",
+          "Title": "FADE",
+          "TitleAlignment": "bottom",
+          "FontSize": 11
+        }
+      ]
+    }
+  ]
+}
